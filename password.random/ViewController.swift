@@ -8,12 +8,27 @@
 import UIKit
 
 class ViewController: UIViewController {
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view.
+    
+    
+    
+    @IBOutlet weak var label: UILabel!
+    @IBAction func gerarSenha(_ sender: UIButton) {
+        
+        let alphabet = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"]
+        
+        let password = alphabet[Int.random(in: 0...25)] + alphabet[Int.random(in: 0...25)] + alphabet[Int.random(in: 0...25)] + alphabet[Int.random(in: 0...25)] + alphabet[Int.random(in: 0...25)] + alphabet[Int.random(in: 0...25)]
+            
+       
+        label.text = password
+        
     }
+    
+    
+    
 
 
+    
+        
+        
+  
 }
-
